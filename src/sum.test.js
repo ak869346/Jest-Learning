@@ -7,3 +7,5 @@ test("Sum function testing",()=> {
 test("Sum testing 2",()=> {
     expect(sum(20,30)).toBe(50);
 })
+
+// for testing two number sum 
