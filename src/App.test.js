@@ -26,7 +26,15 @@ test("Testing Input Box",()=> {
   expect(checkInput).toHaveAttribute("id","userid");   
 }) 
 
+// Change Event test Case....
 test("Testing Change Event",()=> {
+  render(<App/>);
+  let input = screen.getByRole("textbox");
+  fireEvent.change(input,{target:{value:'a'}});
+  expect(input.value).toBe('a');
+})
+
+test("Copying Testing Change Event",()=> {
   render(<App/>);
   let input = screen.getByRole("textbox");
   fireEvent.change(input,{target:{value:'a'}});
