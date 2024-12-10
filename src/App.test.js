@@ -23,7 +23,48 @@ test("Testing Input Box",()=> {
   expect(checkInput).toBeInTheDocument();
   expect(checkInputPlaceHolder).toBeInTheDocument();
   expect(checkInput).toHaveAttribute("name","username");
-  expect(checkInput).toHaveAttribute("id","userid");
+  expect(checkInput).toHaveAttribute("id","userid");   
+})
+
+
+describe("Checking Basic data",()=> {
+
+  test('Check Ankit TestCase 1', () => {
+    render(<App />);
+    const linkElement = screen.getByText(/Testing with Ankit/i);
+    const title = screen.getByTitle("Testing image");
+    expect(linkElement).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
+  });
+
+  test('Check Ankit TestCase 2', () => {
+    render(<App />);
+    const linkElement = screen.getByText(/Testing with Ankit/i);
+    const title = screen.getByTitle("Testing image");
+    expect(linkElement).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
+  });
+
+  test('Check Ankit TestCase 3', () => {
+    render(<App />);
+    const linkElement = screen.getByText(/Testing with Ankit/i);
+    const title = screen.getByTitle("Testing image");
+    expect(linkElement).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
+  });
+
+  describe("Nested Describe testing",()=> {
+
+    test('Check Ankit TestCase 3', () => {
+      render(<App />);
+      const linkElement = screen.getByText(/Testing with Ankit/i);
+      const title = screen.getByTitle("Testing image");
+      expect(linkElement).toBeInTheDocument();
+      expect(title).toBeInTheDocument();
+    });
+  
+  })
+
 })
 
 
